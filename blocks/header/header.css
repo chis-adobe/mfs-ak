@@ -11,7 +11,7 @@ header {
   z-index: 1000;
   overflow: hidden;
   max-height: var(--header-height);
-  background-color: light-dark(var(--color-light), var(--color-dark));
+  background-color: var(--color-mnp-dark-teal);
 
   ul {
     margin: 0;
@@ -26,6 +26,7 @@ header {
 
   a {
     text-decoration: none;
+    color: var(--color-mnp-white);
   }
 
   .btn {

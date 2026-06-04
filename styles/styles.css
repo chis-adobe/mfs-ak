@@ -69,7 +69,16 @@
   --spacing-xs: 4px;
 
   /* color schemes */
-  color-scheme: light dark;
+  color-scheme: light;
+
+  /* MNP brand colors */
+  --color-mnp-dark-teal: #0f3d4f;
+  --color-mnp-heading-teal: #0a3343;
+  --color-mnp-body-text: #6d6d6d;
+  --color-mnp-white: #fff;
+  --color-mnp-light-gray: #f5f5f5;
+  --color-mnp-border: #e0e0e0;
+  --color-mnp-accent: #107f8a;
 
   /* color tokens */
   --color-gray-100: #f1f1f1;
@@ -159,23 +168,24 @@
   --color-dark-base: 0 0 0;
   --color-light: rgb(255 255 255);
   --color-dark: rgb(0 0 0);
-  --color-text: light-dark(var(--color-dark), var(--color-light));
-  --color-link: light-dark(var(--color-gray-900), var(--color-gray-100));
-  --color-brand: var(--color-purple-500);
-  --color-accent: light-dark(var(--color-magenta-600), var(--color-magenta-500));
-  --color-background: light-dark(var(--color-light), var(--color-dark));
-  --color-shaded: light-dark(#f9f9f9, #111);
+  --color-text: var(--color-mnp-body-text);
+  --color-link: var(--color-mnp-heading-teal);
+  --color-brand: var(--color-mnp-dark-teal);
+  --color-accent: var(--color-mnp-accent);
+  --color-background: var(--color-mnp-white);
+  --color-shaded: var(--color-mnp-light-gray);
 
   /* fonts */
-  --font-family: montserrat, "Trebuchet MS", sans-serif;
+  --font-family-heading: soleil, sans-serif;
+  --font-family: "Open Sans", sans-serif;
 
   /* headings */
-  --heading-font-size-xxl: 32.44px;
-  --heading-font-size-xl: 28.83px;
-  --heading-font-size-l: 25.63px;
-  --heading-font-size-m: 22.78px;
-  --heading-font-size-s: 20.25px;
-  --heading-font-size-xs: 18px;
+  --heading-font-size-xxl: 42px;
+  --heading-font-size-xl: 26px;
+  --heading-font-size-l: 22px;
+  --heading-font-size-m: 20px;
+  --heading-font-size-s: 18px;
+  --heading-font-size-xs: 16px;
   --heading-line-height: 1.15;
 
   /* body */
@@ -209,13 +219,12 @@ body {
   margin: 0;
   background-color: var(--color-background);
   color: var(--color-text);
-  font-family: "Trebuchet MS", sans-serif;
+  font-family: var(--font-family);
   font-size: var(--body-font-size-m);
   line-height: var(--body-line-height);
   padding: var(--header-height) 0 0;
 
   &.session {
-    /* only allow font loading if a session */
     font-family: var(--font-family);
   }
 
@@ -332,8 +341,10 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: var(--font-family-heading);
   font-weight: 600;
   line-height: var(--heading-line-height);
+  color: var(--color-mnp-heading-teal);
 }
 
 h1 { font-size: var(--heading-font-size-xxl); }

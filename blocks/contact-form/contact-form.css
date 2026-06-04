@@ -1,0 +1,89 @@
+.contact-form {
+  max-width: var(--grid-container-width);
+  margin: var(--spacing-xxl) auto;
+  padding: var(--spacing-xl);
+  background: var(--color-mnp-light-gray);
+}
+
+.contact-form .contact-form-heading {
+  font-size: var(--heading-font-size-l);
+  margin: 0 0 var(--spacing-xl);
+}
+
+.contact-form .contact-form-fields {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-m);
+}
+
+.contact-form .contact-form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form .contact-form-field label {
+  font-size: var(--body-font-size-s);
+  font-weight: 600;
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-mnp-heading-teal);
+}
+
+.contact-form .contact-form-field input,
+.contact-form .contact-form-field textarea,
+.contact-form .contact-form-field select {
+  padding: 10px 12px;
+  border: 1px solid var(--color-mnp-border);
+  font-size: var(--body-font-size-m);
+  font-family: var(--font-family);
+}
+
+.contact-form .contact-form-field input:focus,
+.contact-form .contact-form-field textarea:focus,
+.contact-form .contact-form-field select:focus {
+  outline: 2px solid var(--color-mnp-accent);
+  border-color: var(--color-mnp-accent);
+}
+
+.contact-form .contact-form-field-checkbox {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: var(--spacing-s);
+}
+
+.contact-form .contact-form-field-checkbox label {
+  font-weight: 400;
+  font-size: var(--body-font-size-s);
+  color: var(--color-mnp-body-text);
+}
+
+.contact-form .contact-form-field-checkbox input {
+  width: auto;
+  margin-top: 3px;
+}
+
+.contact-form .contact-form-submit {
+  background: var(--color-mnp-heading-teal);
+  color: var(--color-mnp-white);
+  border: none;
+  padding: 12px 32px;
+  font-size: var(--body-font-size-m);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  justify-self: start;
+}
+
+.contact-form .contact-form-submit:hover {
+  background: var(--color-mnp-dark-teal);
+}
+
+@media (width >= 900px) {
+  .contact-form .contact-form-fields {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-form .contact-form-field-checkbox,
+  .contact-form .contact-form-submit {
+    grid-column: span 2;
+  }
+}

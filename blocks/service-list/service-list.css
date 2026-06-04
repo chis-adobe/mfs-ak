@@ -1,0 +1,53 @@
+.service-list {
+  max-width: var(--grid-container-width);
+  margin: var(--spacing-xxl) auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-l);
+}
+
+.service-list .service-list-item {
+  border: 1px solid var(--color-mnp-border);
+  padding: var(--spacing-l);
+  transition: box-shadow 0.2s;
+}
+
+.service-list .service-list-item:hover {
+  box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+}
+
+.service-list .service-list-item-title {
+  font-size: var(--heading-font-size-l);
+  margin: 0 0 var(--spacing-s);
+}
+
+.service-list .service-list-item-title a {
+  color: var(--color-mnp-heading-teal);
+  text-decoration: none;
+}
+
+.service-list .service-list-item-title a:hover {
+  text-decoration: underline;
+}
+
+.service-list .service-list-item-desc {
+  color: var(--color-mnp-body-text);
+  line-height: 1.5;
+  margin: 0 0 var(--spacing-m);
+}
+
+.service-list .service-list-item-link {
+  color: var(--color-mnp-heading-teal);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.service-list .service-list-item-link:hover {
+  text-decoration: underline;
+}
+
+@media (width >= 900px) {
+  .service-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
